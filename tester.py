@@ -4,7 +4,7 @@ import matplotlib.animation as animation
 
    
 hmpf = np.ones([4,4])
-print hmpf
+print(hmpf)
 hmpf[2][1] = 0
 imagelist = [ hmpf*i*255./19. for i in range(20) ]
 

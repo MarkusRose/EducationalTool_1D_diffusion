@@ -9,6 +9,13 @@ This is a 1-dimensional diffusion simulation.
 ''' Import needed packages
 'import <package> as <name-user-can-assign>'
 '''
+
+import platform
+
+if platform.system() == "Darwin":
+    import matplotlib
+    matplotlib.use('TkAgg')
+
 import numpy as np   #Numpy is a scientific package to help with array computations
 import matplotlib.pyplot as plt #Plotting package
 import matplotlib.animation as animation
@@ -199,5 +206,5 @@ def makeImage(position):
 if __name__=="__main__":
     makeSimulation()
     makePlots()
-    raw_input("Press Enter to Exit.")
+    input("Press Enter to Exit.")
     
